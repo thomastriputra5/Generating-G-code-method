@@ -1,8 +1,6 @@
-Inkscape-master/
-JTP_Laser_Tool_V1_8/
+extensions/
 
 __pycache__/
 
-.idea/
-
+*.log
 *.pyc
