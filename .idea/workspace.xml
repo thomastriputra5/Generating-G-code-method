@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="eedbc5c2-f02c-4278-a89c-2f52a5defd89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENCE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENCE" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laser.py" beforeDir="false" afterPath="$PROJECT_DIR$/laser.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raster2laser_gcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/raster2laser_gcode.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas_akhir.inx" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.inx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tugas_akhir.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -120,7 +125,7 @@
       <workItem from="1577786801060" duration="1769000" />
       <workItem from="1577792631781" duration="3033000" />
       <workItem from="1577795745966" duration="9058000" />
-      <workItem from="1577850799449" duration="3402000" />
+      <workItem from="1577850799449" duration="4207000" />
     </task>
     <servers />
   </component>

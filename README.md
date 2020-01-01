@@ -1,10 +1,6 @@
 # Tugas Akhir Thomas
 
 ## Licence
-> This licence only applied to this my own code
->
-> I do not own any asset / dependencies this source code use, please refer to the original Authors !
-
 Apache 2
 
 ## Authors
@@ -50,6 +46,8 @@ Apache 2
 ### Windows
 > TODO : Create Windows Installation How-TO
 ### Linux
-> TODO : Create Linux Installation How-TO
+1. run `install.sh`
+2. copy all `extensions` folder content into inkscape extension folder
+3. run inkscape, use the plugin
 ### Mac OS
 > TODO : Create MacOS Installation How-To
