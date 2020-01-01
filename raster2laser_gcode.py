@@ -191,11 +191,6 @@ class GcodeExport(inkex.Effect):
 		return_code = p.wait()
 		f = p.stdout
 		err = p.stderr
-		inkex.errormsg("export_command:"+str(command))
-		inkex.errormsg("return_code:"+str(return_code))
-		inkex.errormsg("f:"+str(f))
-		inkex.errormsg("err:"+str(err))
-
 
 ########	CREA IMMAGINE IN B/N E POI GENERA GCODE
 ######## 	Richiamata da effect()

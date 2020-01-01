@@ -3,12 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="eedbc5c2-f02c-4278-a89c-2f52a5defd89" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/laser.py" beforeDir="false" afterPath="$PROJECT_DIR$/laser.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/raster2laser_gcode.inx" beforeDir="false" afterPath="$PROJECT_DIR$/raster2laser_gcode.inx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/raster2laser_gcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/raster2laser_gcode.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir.inx" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.inx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +120,7 @@
       <workItem from="1577786801060" duration="1769000" />
       <workItem from="1577792631781" duration="3033000" />
       <workItem from="1577795745966" duration="9058000" />
-      <workItem from="1577850799449" duration="2357000" />
+      <workItem from="1577850799449" duration="3402000" />
     </task>
     <servers />
   </component>
@@ -165,10 +160,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="449" y="174" key="SettingsEditor/340.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1577793418851" />
-    <state x="608" y="135" width="704" height="807" key="find.popup" timestamp="1577794271030">
+    <state x="608" y="135" width="704" height="807" key="find.popup" timestamp="1577854198683">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
-    <state x="608" y="135" width="704" height="807" key="find.popup/340.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1577794271030" />
+    <state x="608" y="135" width="704" height="807" key="find.popup/340.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1577854198683" />
     <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1577851755310">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
