@@ -1,10 +1,10 @@
-#!/usr/bin/env python 
+#!/usr/bin/env python
 """
-Modified by Jay Johnson 2015, J Tech Photonics, Inc., jtechphotonics.com 
+Modified by Jay Johnson 2015, J Tech Photonics, Inc., jtechphotonics.com
 modified by Adam Polak 2014, polakiumengineering.org
 
 based on Copyright (C) 2009 Nick Drobchenko, nick@cnc-club.ru
-based on gcode.py (C) 2007 hugomatic... 
+based on gcode.py (C) 2007 hugomatic...
 based on addnodes.py (C) 2005,2007 Aaron Spike, aaron@ekips.org
 based on dots.py (C) 2005 Aaron Spike, aaron@ekips.org
 based on interp.py (C) 2005 Aaron Spike, aaron@ekips.org
@@ -25,6 +25,9 @@ You should have received a copy of the GNU General Public License
 along with this program; if not, write to the Free Software
 Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 """
+import sys
+sys.path.append('/snap/inkscape/5874/share/inkscape/extensions')
+
 import inkex, simplestyle, simplepath
 import cubicsuperpath, simpletransform, bezmisc
 
@@ -33,7 +36,6 @@ import math
 import bezmisc
 import re
 import copy
-import sys
 import time
 import cmath
 import numpy
@@ -2405,15 +2407,6 @@ class Arangement_Genetic:
 ################################################################################
 
 class laser_gcode(inkex.Effect):
-
-    def export_gcode(self,gcode):
-        gcode_pass = gcode
-        for x in range(1,self.options.passes):
-            gcode += "G91\nG1 Z-" + self.options.pass_depth + "\nG90\n" + gcode_pass
-        f = open(self.options.directory+self.options.file, "w")
-        f.write(self.options.laser_off_command + " S0" + "\n" + self.header + "G1 F" + self.options.travel_speed + "\n" + gcode + self.footer)
-        f.close()
-
     def __init__(self):
         inkex.Effect.__init__(self)
         self.OptionParser.add_option("-d", "--directory",                       action="store", type="string",          dest="directory",                           default="",                             help="Output directory")
@@ -2442,7 +2435,15 @@ class laser_gcode(inkex.Effect):
                                      default="M05", help="Laser gcode end command")
         self.OptionParser.add_option("", "--raster-method", action="store", type="int",
                                      dest="raster_method", default=1)
-        
+
+    def export_gcode(self,gcode):
+        gcode_pass = gcode
+        for x in range(1,self.options.passes):
+            gcode += "G91\nG1 Z-" + self.options.pass_depth + "\nG90\n" + gcode_pass
+        f = open(self.options.directory+self.options.file, "w")
+        f.write(self.options.laser_off_command + " S0" + "\n" + self.header + "G1 F" + self.options.travel_speed + "\n" + gcode + self.footer)
+        f.close()
+
     def parse_curve(self, p, layer, w = None, f = None):
             c = []
             if len(p)==0 : 

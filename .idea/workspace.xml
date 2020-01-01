@@ -2,16 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eedbc5c2-f02c-4278-a89c-2f52a5defd89" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/dxf_input.inx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/laser.inx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/install.sh" beforeDir="false" afterPath="$PROJECT_DIR$/install.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/laser.py" beforeDir="false" afterPath="$PROJECT_DIR$/laser.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raster2laser_gcode.inx" beforeDir="false" afterPath="$PROJECT_DIR$/raster2laser_gcode.inx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/raster2laser_gcode.py" beforeDir="false" afterPath="$PROJECT_DIR$/raster2laser_gcode.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tugas_akhir.inx" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.inx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tugas_akhir.py" beforeDir="false" afterPath="$PROJECT_DIR$/tugas_akhir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir_plugin/dependency/dxf_input.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir_plugin/dependency/png.py" beforeDir="false" afterPath="$PROJECT_DIR$/png.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir_plugin/jtp_laser.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tugas_akhir_plugin/raster_laser.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,8 @@
       <updated>1577786797702</updated>
       <workItem from="1577786801060" duration="1769000" />
       <workItem from="1577792631781" duration="3033000" />
-      <workItem from="1577795745966" duration="8880000" />
+      <workItem from="1577795745966" duration="9058000" />
+      <workItem from="1577850799449" duration="2357000" />
     </task>
     <servers />
   </component>
@@ -171,6 +169,10 @@
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="608" y="135" width="704" height="807" key="find.popup/340.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1577794271030" />
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup" timestamp="1577851755310">
+      <screen x="0" y="0" width="1920" height="1080" />
+    </state>
+    <state x="623" y="237" width="672" height="678" key="search.everywhere.popup/340.1080.1366.768/0.0.1920.1080@0.0.1920.1080" timestamp="1577851755310" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Generating_G_code_method$jtp_laser.coverage" NAME="jtp_laser Coverage Results" MODIFIED="1577795025607" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tugas_akhir_plugin" />

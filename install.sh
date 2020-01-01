@@ -23,4 +23,5 @@ echo "Copying To Directory..."
 mkdir -p ~/snap/inkscape/5874/extensions/         # Change this Accordingly
 cp extensions/* ~/snap/inkscape/5874/extensions/  # Also This needs to be changed accordingly
 
-#inkscape | tee dev.inkscape.log
+echo "Running Inkscape"
+inkscape > dev.inkscape.log

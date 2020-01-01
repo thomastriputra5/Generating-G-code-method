@@ -29,6 +29,7 @@ import re
 
 sys.path.append('/usr/share/inkscape/extensions')
 sys.path.append('/Applications/Inkscape.app/Contents/Resources/extensions') 
+sys.path.append('/snap/inkscape/5874/share/inkscape/extensions')
 
 import subprocess
 import math
@@ -48,7 +49,7 @@ class GcodeExport(inkex.Effect):
 		# Opzioni di esportazione dell'immagine
 		self.OptionParser.add_option("-d", "--directory",action="store", type="string", dest="directory", default="/home/",help="Directory for files") ####check_dir
 		self.OptionParser.add_option("-f", "--filename", action="store", type="string", dest="filename", default="-1.0", help="File name")            
-		self.OptionParser.add_option("","--add-numeric-suffix-to-filename", action="store", type="inkbool", dest="add_numeric_suffix_to_filename", default=True,help="Add numeric suffix to filename")            
+		self.OptionParser.add_option("","--add-numeric-suffix-to-filename", action="store", type="inkbool", dest="add_numeric_suffix_to_filename", default=True, help="Add numeric suffix to filename")
 		self.OptionParser.add_option("","--bg_color",action="store",type="string",dest="bg_color",default="",help="")
 		self.OptionParser.add_option("","--resolution",action="store", type="int", dest="resolution", default="5",help="") #Usare il valore su float(xy)/resolution e un case per i DPI dell export
 		
@@ -81,6 +82,9 @@ class GcodeExport(inkex.Effect):
 		self.OptionParser.add_option("","--preview_only",action="store", type="inkbool", dest="preview_only", default=False,help="") 
 
 		#inkex.errormsg("BLA BLA BLA Messaggio da visualizzare") #DEBUG
+
+		# wowotek MOD
+		self.OptionParser.add_option("","--raster-method",action="store", type="int", dest="raster_method", default=1)
 
 
 		
@@ -152,8 +156,6 @@ class GcodeExport(inkex.Effect):
 			#Esporto l'immagine in PNG
 			self.exportPage(pos_file_png_exported,current_file,bg_color)
 
-
-			
 			#DA FARE
 			#Manipolo l'immagine PNG per generare il file Gcode
 			self.PNGtoGcode(pos_file_png_exported,pos_file_png_BW,pos_file_gcode)
@@ -183,12 +185,16 @@ class GcodeExport(inkex.Effect):
 		else:
 			DPI = 254
 
-		command="inkscape -C -e \"%s\" -b\"%s\" %s -d %s" % (pos_file_png_exported,bg_color,current_file,DPI) #Comando da linea di comando per esportare in PNG
-					
+		command='inkscape -C -e "%s" -b "%s" %s -d %s' % (pos_file_png_exported, bg_color, current_file, DPI) #Comando da linea di comando per esportare in PNG
+
 		p = subprocess.Popen(command, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
 		return_code = p.wait()
 		f = p.stdout
 		err = p.stderr
+		inkex.errormsg("export_command:"+str(command))
+		inkex.errormsg("return_code:"+str(return_code))
+		inkex.errormsg("f:"+str(f))
+		inkex.errormsg("err:"+str(err))
 
 
 ########	CREA IMMAGINE IN B/N E POI GENERA GCODE
@@ -200,7 +206,7 @@ class GcodeExport(inkex.Effect):
 		#Scorro l immagine e la faccio diventare una matrice composta da list
 
 
-		reader = raster2laser.png.Reader(pos_file_png_exported)#File PNG generato
+		reader = png.Reader(pos_file_png_exported)#File PNG generato
 		
 		w, h, pixels, metadata = reader.read_flat()
 		
@@ -405,7 +411,7 @@ class GcodeExport(inkex.Effect):
 
 		#### SALVO IMMAGINE IN BIANCO E NERO ####
 		file_img_BN = open(pos_file_png_BW, 'wb') #Creo il file
-		Costruttore_img = raster2laser.png.Writer(w, h, greyscale=True, bitdepth=8) #Impostazione del file immagine
+		Costruttore_img = png.Writer(w, h, greyscale=True, bitdepth=8) #Impostazione del file immagine
 		Costruttore_img.write(file_img_BN, matrice_BN) #Costruttore del file immagine
 		file_img_BN.close()	#Chiudo il file
 

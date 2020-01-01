@@ -13,14 +13,12 @@
     <param name="Title" type="description">Tugas Akhir Thomas</param>
 	<param name="Description" type="description">Author: Thomas</param>
 
-    <param name="_sep0" type="description">&emsp;&ensp;</param>
     <param name="_sep1" type="description">--- Export File ---</param>
 
     <param name="directory" type="string"  gui-text="Export directory">~/</param>
 	<param name="filename" type="string"  gui-text="File Name">export.gcode</param>
     <param name="add-numeric-suffix-to-filename" type="boolean" gui-text="Add numeric suffix to filename">true</param>
 
-    <param name="_sep2" type="description">&emsp;&ensp;</param>
     <param name="_sep3" type="description">--- CNC Configuration ---</param>
 
     <param name="laseron" type="string" gui-text="Laser ON Command">M03</param>

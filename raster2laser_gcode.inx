@@ -20,7 +20,7 @@
     
 	<!-- Opzioni di esportazione dell'immagine -->
 	<param name="directory" type="string"  gui-text="Export directory"></param>
-	<param name="filename" type="string"  gui-text="File Name"></param>
+	<param name="filename" type="string"  gui-text="File Name">export.gcode</param>
 	<param name="add-numeric-suffix-to-filename" type="boolean" gui-text="Add numeric suffix to filename">true</param>
 		
 	<param name="bg_color" type="enum" gui-text="Replace transparency with">
